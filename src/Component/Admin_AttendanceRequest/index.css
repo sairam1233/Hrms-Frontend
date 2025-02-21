@@ -1,0 +1,150 @@
+/* App.css */
+.container {
+    min-height: 100vh;
+    background-color: #ffffff;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    margin-left: 330px;
+    margin-top: 20px;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1f2937;
+  }
+  
+  .table-container-attendance-req {
+    width: 1000px;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #ffffff;
+
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 50px;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background: linear-gradient(150deg, #02499b, #0257ac);
+    color: #ffffff;
+    cursor: pointer;
+  }
+ 
+
+  .status {
+    text-align: center;
+    padding-right: 10px !important;
+    margin-right: 10px !important;
+    color: red !important;
+  }
+  
+  .status.active {
+    background-color: #ffffff;
+    color: #065f46;
+    font-size: bold;
+  }
+  
+  .status.on-leave {
+    background-color: #ffffff;
+    color: #92400e;
+  }
+  
+  .status.remote {
+    background-color: #ffffff;
+    color: #6b21a8;
+  }
+  
+  .reject, .accept {
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    color: black !important;
+    border: none !important;
+    margin-right: 16px;
+  }
+  
+  .reject {
+    background-color: #dc2626;
+    color: white !important;
+    border: 1px solid #dc2626;
+  }
+  
+  .reject:hover, .reject.active {
+    background-color: #dc2626;
+    color: white !important;
+  }
+  
+  .accept {
+    background-color:#16a34a;
+    color: white !important;
+    border: 1px solid #16a34a;
+  }
+  
+  .accept:hover, .accept.active {
+    background-color: #16a34a;
+    color: white !important;
+  }
+
+
+  .popup {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #f3f4f6;
+    padding: 30px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    text-align: center;
+    font-weight: 700;
+  }
+  
+  .action-button {
+    padding: 6px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #ffffff;
+  }
+ 
+  .ribbon-box-attendance-request-admin{
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    --r: .4em; /* control the ribbon shape (the radius) */
+    --c:#02499b ;
+    position: absolute;
+    top: 55px;
+    width: 200px;
+    margin-left: -25px;
+    line-height: 1.8; 
+    padding: 0 .5em calc(2*var(--r));
+    border-radius: var(--r) 0 0 var(--r);
+    background: 
+      radial-gradient(100% 50% at left,var(--c) 98%,#0000 101%)
+       100% 0/.5lh calc(100% - 2*var(--r)),
+      radial-gradient(100% 50% at right,#0005 98%,#0000 101%) 
+       0 100%/var(--r) calc(2*var(--r)),
+      conic-gradient(from 90deg at var(--r) calc(100% - 2*var(--r)),#0000 25%,var(--c) 0)
+       0 0/calc(101% - .5lh) 100%;
+    background-repeat: no-repeat;   
+
+}

@@ -1,0 +1,320 @@
+/* Calendar Header */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: white;
+    animation: fadeIn 1s ease-in-out;
+}
+.calendar-header h1 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 20px;
+    color: #0055b6;
+}
+
+.add-event-icon {
+    font-size: 24px;
+    color: #0055b6;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.add-event-icon:hover {
+    transform: scale(1.2);
+}
+
+.close-event-icon {
+    font-size: 24px;
+    color: #ff4d4d;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.close-event-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Calendar Layout */
+.calendar-render {
+    margin: 3px 0px 0px 100px;
+    width: 90%;
+    height: 68%; /* Use min-height */
+    border-radius: 12px;
+    padding: 30px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+.calendar-render1 {
+    margin: 3px 0px 0px 300px;
+    width: 75%;
+    height: 68%; /* Use min-height */
+    border-radius: 12px;
+    padding: 30px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+.calendar-render.show {
+    opacity: 1;
+    transform: translateY(0);
+    height: auto; /* Adjust height */
+    overflow: visible; /* Ensure overflow when form is shown */
+}
+
+/* Day Background */
+.rbc-day-bg {
+    width: 100%; /* Make it square by setting width to 100% */
+    height: 0;
+    padding-bottom: 100%; /* Maintain aspect ratio */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f4f8;
+    border: 1px solid #e0e4e8;
+    transition: background-color 0.3s;
+    box-sizing: border-box;
+}
+
+.rbc-day-bg:hover {
+    background-color: #e0f3ff;
+}
+
+/* Today Button */
+.rbc-btn-group.rbc-today-btn {
+    background: linear-gradient(40deg, #0055b6, #036bd3);
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.rbc-btn-group.rbc-today-btn:hover {
+    transform: translateY(-2px);
+    border: 1px solid #0055b6;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.rbc-toolbar .rbc-toolbar-label {
+    font-size: 1rem;
+    font-weight: bold;
+}
+.rbc-toolbar button {
+    border-radius: 6px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+.rbc-button-link {
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+
+/* Event Form */
+.event-form-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.event-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+    max-width: 90%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Add relative positioning */
+}
+
+.close-event-icon {
+    position: absolute; /* Position the icon absolutely */
+    top: 10px; /* Adjust the top position */
+    right: 10px; /* Adjust the right position */
+    font-size: 24px;
+    color: #ff4d4d;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.close-event-icon:hover {
+    transform: scale(1.2);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.form-field {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.styled-input, .styled-select {
+    width: 100%;
+    padding: 10px 10px 10px 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.styled-input:focus, .styled-select:focus {
+    border-color: #0055b6;
+    outline: none;
+}
+
+.styled-select {
+    appearance: none;
+    background: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23888" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>') no-repeat right 10px center;
+    background-size: 16px 16px;
+}
+
+/* Add Event Button */
+.add-event-btn {
+    background-color: #0055b6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.add-event-btn:hover {
+    background-color: #004494;
+}
+
+/* Form Buttons */
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.add-event-btn, .cancel-event-btn {
+    background-color: #0055b6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.add-event-btn:hover, .cancel-event-btn:hover {
+    background-color: #004494;
+}
+
+.cancel-event-btn {
+    background-color: #ff4d4d;
+}
+
+.cancel-event-btn:hover {
+    background-color: #ff1a1a;
+}
+
+/* Calendar Event */
+.calendar-event {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+.calendar-event:hover {
+    background-color: #004494;
+}
+
+.calendar-event .delete-icon {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.calendar-event:hover .delete-icon {
+    transform: scale(1.2);
+}
+
+.calendar-event .delete-icon:hover {
+    color: #ff4d4d;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Shake Animation */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .event-form {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .styled-input, .styled-select {
+        width: 100%;
+    }
+
+    .add-event-btn {
+        width: 100%;
+    }
+
+    .calendar-render {
+        width: 95%;
+        margin: 15px auto;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}

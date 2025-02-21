@@ -1,0 +1,193 @@
+/* General Styles */
+.add-employee-container {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-top: 40px !important;
+}
+
+/* Container */
+.add-employee-form-container {
+    width: 90vw;
+    max-width: 100%;
+    padding: 20px;
+    margin: 0px !important;
+    margin-left: 200px !important;
+}
+
+/* Form Styling */
+.add-employee-form {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Headings */
+.add-employee-form h1 {
+    text-align: center;
+    color: #333;
+    font-size: 32px;
+}
+
+/* Fieldset and Input Styling */
+.add-employee-fieldset {
+    border: none;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    grid-column: span 2;
+}
+
+.add-employee-legend {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1e3c72;
+}
+
+/* Input Groups */
+.add-employee-input-group {
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.add-employee-input-row {
+    display: flex;
+    gap: 20px;
+}
+
+.add-employee-input-row .add-employee-input-group {
+    flex: 1;
+}
+
+.add-employee-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.add-employee-input, .add-employee-select, .add-employee-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px !important;
+    transition: all 0.3s;
+}
+
+.add-employee-input:focus, .add-employee-select:focus, .add-employee-textarea:focus {
+    border-color: #1e3c72;
+    outline: none;
+    box-shadow: 0 0 5px rgba(30, 60, 114, 0.5);
+}
+
+/* Image Upload */
+.add-employee-input[type="file"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f3f4f6;
+    transition: all 0.3s;
+}
+
+.add-employee-input[type="file"]:focus {
+    border-color: #1e3c72;
+    box-shadow: 0 0 5px rgba(30, 60, 114, 0.5);
+}
+
+/* Gender Radio Button */
+.add-employee-input-group input[type="radio"] {
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+.add-employee-input-group div label {
+    margin-right: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.add-employee-input-group div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.add-employee-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Button */
+.add-employee-submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: #1e3c72;
+    color: white;
+    border: none;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    grid-column: span 2;
+}
+
+.add-employee-submit-btn:hover {
+    background: #2a5298;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .add-employee-form-container {
+        max-width: 95%;
+    }
+
+    .add-employee-input-row {
+        flex-direction: column;
+    }
+
+    .add-employee-form {
+        padding: 20px;
+    }
+}
+
+/* Customize the scroll bar */
+.add-employee-container::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+    height: 12px; /* Height of the scrollbar */
+}
+
+/* Scrollbar track */
+.add-employee-container::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light gray background for the track */
+    border-radius: 10px;
+}
+
+/* Scrollbar handle */
+.add-employee-container::-webkit-scrollbar-thumb {
+    background: #ffffff; /* Dark blue color for the scrollbar */
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Scrollbar handle hover */
+.add-employee-container::-webkit-scrollbar-thumb:hover {
+    background: #ffffff; /* Lighter blue when hovering */
+}
+
+/* Scrollbar corner (if needed) */
+.add-employee-container::-webkit-scrollbar-corner {
+    background: transparent;
+}

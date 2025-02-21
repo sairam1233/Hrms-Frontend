@@ -1,0 +1,221 @@
+.employee-overview-container {
+    padding: 20px;
+    border-radius: 8px;
+    width: 75%;
+    margin-top: 50px;
+    margin-left: 340px;
+    height: 100vh;
+    box-shadow: #0000001a 0px 3px 4px;
+}
+
+.employee-details {
+    margin-top: 10px;
+}
+
+.employee-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 5px;
+}
+
+.employee-table th, .employee-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    height: 40px;
+    background-color: rgb(250, 242, 242);
+
+}
+
+.employee-table th {
+    background: linear-gradient(150deg, #02499b, #0257ac);
+    color: white;
+}
+
+.employee-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.employee-table tr:hover {
+    background-color: #ddd;
+}
+
+.employee-table-address {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 140px;
+}
+
+.employee-table-address th, .employee-table-address td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    height: 40px;
+    background-color: rgb(250, 242, 242);
+
+}
+
+.employee-table-address th {
+    background: linear-gradient(150deg, #02499b, #0257ac);
+    color: white;
+}
+
+.employee-table-address tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.employee-table-address tr:hover {
+    background-color: #ddd;
+}
+
+/* HTML: <div class="ribbon">Your text content</div> */
+.ribbon {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    --r: .4em; /* control the ribbon shape (the radius) */
+    --c:#02499b ;
+    position: absolute;
+    top: 180px;
+    margin-left: -30px;
+    line-height: 1.8; 
+    padding: 0 .5em calc(2*var(--r));
+    border-radius: var(--r) 0 0 var(--r);
+    background: 
+      radial-gradient(100% 50% at left,var(--c) 98%,#0000 101%)
+       100% 0/.5lh calc(100% - 2*var(--r)),
+      radial-gradient(100% 50% at right,#0005 98%,#0000 101%) 
+       0 100%/var(--r) calc(2*var(--r)),
+      conic-gradient(from 90deg at var(--r) calc(100% - 2*var(--r)),#0000 25%,var(--c) 0)
+       0 0/calc(101% - .5lh) 100%;
+    background-repeat: no-repeat;   
+}
+
+.ribbon-address{
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    --r: .4em; /* control the ribbon shape (the radius) */
+    --c:#02499b ;
+    position: absolute;
+    top: 400px;
+    margin-left: -30px;
+    line-height: 1.8; 
+    padding: 0 .5em calc(2*var(--r));
+    border-radius: var(--r) 0 0 var(--r);
+    background: 
+      radial-gradient(100% 50% at left,var(--c) 98%,#0000 101%)
+       100% 0/.5lh calc(100% - 2*var(--r)),
+      radial-gradient(100% 50% at right,#0005 98%,#0000 101%) 
+       0 100%/var(--r) calc(2*var(--r)),
+      conic-gradient(from 90deg at var(--r) calc(100% - 2*var(--r)),#0000 25%,var(--c) 0)
+       0 0/calc(101% - .5lh) 100%;
+    background-repeat: no-repeat;   
+
+}
+
+.edit-icon{
+    cursor: pointer;
+    margin-left: 10px;
+    color: #ffffff;
+    margin-right: 5px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.edit-button, .list-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.edit-button:hover, .list-button:hover {
+    background-color: #0056b3;
+}
+
+.edit-button{
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.heading-overview{
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-left: 20px;
+}
+/* HTML: <div class="ribbon">Your text content</div> */
+.list-button{
+    background-color: #00c77b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.ribbon-box-attendance-log-activiy{
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    --r: .4em; /* control the ribbon shape (the radius) */
+    --c:#02499b ;
+    position: absolute;
+    top: 600px;
+    margin-left: -30px;
+    line-height: 1.8; 
+    padding: 0 .5em calc(2*var(--r));
+    border-radius: var(--r) 0 0 var(--r);
+    background: 
+      radial-gradient(100% 50% at left,var(--c) 98%,#0000 101%)
+       100% 0/.5lh calc(100% - 2*var(--r)),
+      radial-gradient(100% 50% at right,#0005 98%,#0000 101%) 
+       0 100%/var(--r) calc(2*var(--r)),
+      conic-gradient(from 90deg at var(--r) calc(100% - 2*var(--r)),#0000 25%,var(--c) 0)
+       0 0/calc(101% - .5lh) 100%;
+    background-repeat: no-repeat;   
+
+}
+
+
+.employee-table-attendance-log {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 110px;
+}
+
+.employee-table-attendance-log th, .employee-table-attendance-log td {
+    border: none;
+    padding: 8px;
+    text-align: left;
+    height: 40px;
+    background-color: #ffffff;
+
+}
+
+.employee-table-attendance-log th {
+    color: #ffffff;
+    background-color: #f2f2f2;
+}
+
+.employee-table-attendance-log tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.employee-table-attendance-log tr:hover {
+    background-color: #ddd;
+}
