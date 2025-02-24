@@ -10,7 +10,6 @@ const Home = () => {
     const totalDuration = 9;
     const passedDuration = 8;
     const progressPercentage = (passedDuration / totalDuration) * 100;
-    console.log(slide)
 
     useEffect(() => {
         const updateDateTime = () => {

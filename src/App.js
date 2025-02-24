@@ -22,6 +22,7 @@ import AddEmployee from "./Component/EmployeeMangement/AddEmployee";
 import EmployeeOverview from "./Component/EmployeeMangement/EmployeeOverview";
 import SystemConfiguration from "./Component/SystemConfiguration";
 import AdminAttendenceReqp from "./Component/Admin_AttendanceRequest";
+import MarkList from "./Component/MarkList";
 import "./App.css";
 
 const App = () => {
@@ -34,6 +35,7 @@ const App = () => {
                             <Route path="/register" element={<RegisterForm />} />
                             <Route path="/forgotpassword" element={<ForgotPassword />} />
                             <Route path="/home" element={<ProtectedRoute role="Employee"><Sidebar /><NavbarComponent /><Home /></ProtectedRoute>} />
+                            <Route path="/marklist" element={<ProtectedRoute role="Employee"><Sidebar /><NavbarComponent /><MarkList /></ProtectedRoute>} />
                             <Route path="/calendar" element={<ProtectedRoute role="Employee"><Sidebar /><NavbarComponent /><CalendarComponent /></ProtectedRoute>} />
                             <Route path="/paidleave" element={<ProtectedRoute role="Employee"><Sidebar /><NavbarComponent /><LeaveForm /></ProtectedRoute>} />
                             <Route path="/unpaidleave" element={<ProtectedRoute role="Employee"><Sidebar /><NavbarComponent /><LeaveForm /></ProtectedRoute>} />

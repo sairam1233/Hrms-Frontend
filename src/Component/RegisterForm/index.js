@@ -3,7 +3,6 @@ import { Navigate} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap for styling
 
 import "./index.css";
-import { FaBuilding, FaCalendar, FaEnvelope, FaGlobe, FaUserTie, FaVenusMars } from "react-icons/fa";
 
 class RegisterForm extends Component {
   constructor(props) {
